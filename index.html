@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RBX404 — Cybersecurity, explained for your phone</title>
+<meta name="description" content="Short, practical cybersecurity lessons for mobile users: passwords, phishing, 2FA, public Wi-Fi, app permissions and what to do if you get hacked.">
+<meta name="theme-color" content="#060a11">
+<meta property="og:title" content="RBX404 — Cybersecurity, explained for your phone">
+<meta property="og:description" content="9 five-minute lessons, a phishing quiz and a private password lab. Learn to spot the scam before it spots you.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+<a class="skip-link" href="#lessons">Skip to lessons</a>
+
+<!-- ============================ HEADER ============================ -->
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">🛡️</span>
+      <span class="brand-text">Cyber<span>Aware</span></span>
+    </a>
+    <div class="progress-pill" title="Lessons completed">
+      <span class="dot" aria-hidden="true"></span>
+      <span id="progressText">0 / 9 learned</span>
+    </div>
+  </div>
+  <div class="progress-track" aria-hidden="true"><div id="progressBar"></div></div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero">
+    <span class="badge"><span class="pulse" aria-hidden="true"></span> Mobile-first · 5-minute lessons</span>
+    <h1>Learn to spot the scam <span class="grad">before it spots you.</span></h1>
+    <p class="hero-sub">
+      Nine short, practical lessons on the things that actually get people hacked on a phone:
+      weak passwords, phishing links, OTP scams, rogue Wi-Fi and shady apps.
+    </p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#lessons">Start learning →</a>
+      <a class="btn ghost" href="#quiz">Test yourself</a>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><b>9</b><span>Lessons</span></div>
+      <div class="stat"><b>7</b><span>Quiz questions</span></div>
+      <div class="stat"><b>0</b><span>Data collected</span></div>
+    </div>
+  </section>
+
+  <!-- ============================ TIP ============================ -->
+  <aside class="tip-card" aria-label="Security tip of the moment">
+    <span class="tip-icon" aria-hidden="true">💡</span>
+    <div class="tip-body">
+      <span class="tip-label">Quick tip</span>
+      <p id="tipText">Loading tip…</p>
+    </div>
+    <button class="tip-next" id="tipNext" type="button" aria-label="Show another tip" title="Another tip">↻</button>
+  </aside>
+
+  <!-- ========================== LESSONS ========================== -->
+  <section class="section" id="lessons">
+    <div class="section-head">
+      <span class="eyebrow">The basics</span>
+      <h2>Nine lessons that matter</h2>
+      <p>Tap a card to open it. Mark lessons as learned and your progress stays in this browser — nothing is uploaded.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filter lessons by category">
+      <button class="chip is-active" data-filter="all" type="button">All</button>
+      <button class="chip" data-filter="basics" type="button">Basics</button>
+      <button class="chip" data-filter="threats" type="button">Threats</button>
+      <button class="chip" data-filter="mobile" type="button">Mobile</button>
+      <button class="chip" data-filter="networks" type="button">Networks</button>
+      <button class="chip" data-filter="privacy" type="button">Privacy</button>
+      <button class="chip" data-filter="response" type="button">Response</button>
+    </div>
+
+    <div class="lesson-grid" id="lessonGrid">
+
+      <!-- 1 -->
+      <article class="lesson" id="lesson-passwords" data-lesson="passwords" data-cat="basics">
+        <button class="lesson-head" type="button" aria-expanded="false" aria-controls="body-passwords">
+          <span class="lesson-icon" aria-hidden="true">🔑</span>
+          <span class="lesson-titles">
+            <span class="lesson-cat">Basics · 5 min</span>
+            <span class="lesson-title">Passwords that actually hold</span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="lesson-body" id="body-passwords" hidden>
+          <p class="lead">Most account takeovers start with a password that was reused, guessed, or leaked in someone else's breach.</p>
+          <ul class="ticks">
+            <li><b>One password per account.</b> A breach on one site must not unlock the rest.</li>
+            <li><b>Length beats complexity.</b> Four random words beat <code>P@ssw0rd!</code>.</li>
+            <li><b>Use a password manager</b> to generate and remember them for you.</li>
+            <li><b>Never type a password</b> after tapping a link in an SMS or email.</li>
+            <li><b>Check for leaks</b> at haveibeenpwned.com and change anything exposed.</li>
+          </ul>
+          <div class="callout">If you can remember it without a manager, it is probably reused somewhere.</div>
+          <div class="lesson-foot">
+            <span class="tag">5 min read</span>
+            <button class="btn-done" type="button" data-done="passwords" aria-pressed="false">Mark as learned</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="lesson" id="lesson-2fa" data-lesson="2fa" data-cat="basics">
+        <button class="lesson-head" type="button" aria-expanded="false" aria-controls="body-2fa">
+          <span class="lesson-icon" aria-hidden="true">🔐</span>
+          <span class="lesson-titles">
+            <span class="lesson-cat">Basics · 4 min</span>
+            <span class="lesson-title">Two-factor that is hard to beat</span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="lesson-body" id="body-2fa" hidden>
+          <p class="lead">A second lock turns a stolen password into a dead end — but only if the second factor is the right kind.</p>
+          <ul class="ticks">
+            <li><b>Turn on 2FA everywhere,</b> starting with email and banking.</li>
+            <li><b>Prefer passkeys or an authenticator app</b> over SMS codes.</li>
+            <li><b>Store backup codes offline</b> — printed or in a manager, not a screenshot in chat.</li>
+            <li><b>Never approve a login you did not start.</b> Repeated prompts mean someone has your password.</li>
+            <li><b>Codes arriving unrequested</b> are a warning: change that password now.</li>
+          </ul>
+          <div class="callout danger">Your email is the master key. Secure it first — it can reset everything else.</div>
+          <div class="lesson-foot">
+            <span class="tag">4 min read</span>
+            <button class="btn-done" type="button" data-done="2fa" aria-pressed="false">Mark as learned</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="lesson" id="lesson-phishing" data-lesson="phishing" data-cat="threats">
+        <button class="lesson-head" type="button" aria-expanded="false" aria-controls="body-phishing">
+          <span class="lesson-icon" aria-hidden="true">🎣</span>
+          <span class="lesson-titles">
+            <span class="lesson-cat">Threats · 6 min</span>
+            <span class="lesson-title">Phishing, smishing and fake links</span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="lesson-body" id="body-phishing" hidden>
+          <p class="lead">A phishing message is a con with a deadline. It borrows a brand you trust and rushes you into a tap.</p>
+          <ul class="ticks">
+            <li><b>Urgency and fear are the tell.</b> “Blocked”, “suspended”, “within 24 hours”.</li>
+            <li><b>Check the sender address,</b> not the display name — both can be faked.</li>
+            <li><b>Do not tap.</b> Open the official app or type the address yourself.</li>
+            <li><b>Look for lookalike domains:</b> <code>paypa1.com</code>, <code>arnazon.in</code>, <code>bank-secure.xyz</code>.</li>
+            <li><b>Real companies never ask</b> for your OTP, PIN, password or a “small fee” by link.</li>
+            <li><b>Report and delete.</b> In Gmail: ⋮ → Report phishing.</li>
+          </ul>
+          <div class="callout">On a phone, long-press a link to preview the real destination before tapping.</div>
+          <div class="lesson-foot">
+            <span class="tag">6 min read</span>
+            <button class="btn-done" type="button" data-done="phishing" aria-pressed="false">Mark as learned</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="lesson" id="lesson-wifi" data-lesson="wifi" data-cat="networks">
+        <button class="lesson-head" type="button" aria-expanded="false" aria-controls="body-wifi">
+          <span class="lesson-icon" aria-hidden="true">📶</span>
+          <span class="lesson-titles">
+            <span class="lesson-cat">Networks · 4 min</span>
+            <span class="lesson-title">Public Wi-Fi without the risk</span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="lesson-body" id="body-wifi" hidden>
+          <p class="lead">Open Wi-Fi is convenient because it asks for nothing — not even proof that it is the network it claims to be.</p>
+          <ul class="ticks">
+            <li><b>Treat open Wi-Fi as public.</b> Anyone nearby can be watching.</li>
+            <li><b>Avoid banking and logins</b> on café, airport or hotel networks.</li>
+            <li><b>Use mobile data</b> — or a trusted VPN — for sensitive tasks.</li>
+            <li><b>Turn off auto-join</b> and forget networks you no longer use.</li>
+            <li><b>Watch for “evil twin” hotspots</b> that copy a real café's name.</li>
+            <li><b>HTTPS is the minimum,</b> not a guarantee: a fake page can still have a padlock.</li>
+          </ul>
+          <div class="callout">If a captive portal asks you to install a profile, certificate or app — walk away.</div>
+          <div class="lesson-foot">
+            <span class="tag">4 min read</span>
+            <button class="btn-done" type="button" data-done="wifi" aria-pressed="false">Mark as learned</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="lesson" id="lesson-apps" data-lesson="apps" data-cat="mobile">
+        <button class="lesson-head" type="button" aria-expanded="false" aria-controls="body-apps">
+          <span class="lesson-icon" aria-hidden="true">📱</span>
+          <span class="lesson-titles">
+            <span class="lesson-cat">Mobile · 5 min</span>
+            <span class="lesson-title">App permissions worth saying no to</span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="lesson-body" id="body-apps" hidden>
+          <p class="lead">Every permission you grant is data or control you hand over. A flashlight does not need your messages.</p>
+          <ul class="ticks">
+            <li><b>Install from the official store,</b> not from a forwarded APK.</li>
+            <li><b>Question every permission.</b> SMS, contacts and accessibility access are high-risk.</li>
+            <li><b>Review permissions monthly</b> and revoke what an app no longer needs.</li>
+            <li><b>Remove apps you do not use.</b> Old apps stop getting fixes.</li>
+            <li><b>Keep “install unknown apps” off</b> in system settings.</li>
+            <li><b>Update apps and the OS</b> — or enable automatic updates.</li>
+          </ul>
+          <div class="callout danger">A screen-sharing request during a “support call” can let a stranger read your banking app.</div>
+          <div class="lesson-foot">
+            <span class="tag">5 min read</span>
+            <button class="btn-done" type="button" data-done="apps" aria-pressed="false">Mark as learned</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="lesson" id="lesson-social" data-lesson="social" data-cat="threats">
+        <button class="lesson-head" type="button" aria-expanded="false" aria-controls="body-social">
+          <span class="lesson-icon" aria-hidden="true">🎭</span>
+          <span class="lesson-titles">
+            <span class="lesson-cat">Threats · 6 min</span>
+            <span class="lesson-title">Social engineering and OTP scams</span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="lesson-body" id="body-social" hidden>
+          <p class="lead">Scammers rarely break in. They talk someone into opening the door — and the phone is where that happens.</p>
+          <ul class="ticks">
+            <li><b>A verification code is for you only.</b> Never read it to anyone, ever.</li>
+            <li><b>“Wrong number” chats</b> that turn flirty or friendly often end in an investment or crypto scam.</li>
+            <li><b>Voice and video can be faked.</b> Verify money requests on a second channel.</li>
+            <li><b>Family emergency + new number + urgent money</b> is a classic script.</li>
+            <li><b>Hang up and call back</b> on a number you already know.</li>
+            <li><b>Police, bank or “support” calls</b> never need remote access to your phone.</li>
+          </ul>
+          <div class="callout">Scammers target people, not systems. Being polite is not worth being robbed.</div>
+          <div class="lesson-foot">
+            <span class="tag">6 min read</span>
+            <button class="btn-done" type="button" data-done="social" aria-pressed="false">Mark as learned</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="lesson" id="lesson-updates" data-lesson="updates" data-cat="basics">
+        <button class="lesson-head" type="button" aria-expanded="false" aria-controls="body-updates">
+          <span class="lesson-icon" aria-hidden="true">🔄</span>
+          <span class="lesson-titles">
+            <span class="lesson-cat">Basics · 4 min</span>
+            <span class="lesson-title">Updates and backups</span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="lesson-body" id="body-updates" hidden>
+          <p class="lead">An update closes a door attackers already know about. A backup is what lets you walk away from a ransom demand.</p>
+          <ul class="ticks">
+            <li><b>Enable automatic updates</b> for the OS, browser and messaging apps.</li>
+            <li><b>Reboot when asked.</b> A pending update is still an open door.</li>
+            <li><b>Follow 3-2-1:</b> three copies, on two kinds of media, one off-site.</li>
+            <li><b>Test a restore</b> at least once. An untested backup is a hope.</li>
+            <li><b>Keep one backup offline,</b> so ransomware cannot encrypt it too.</li>
+          </ul>
+          <div class="callout">Your phone's cloud backup protects photos and chats — but not your whole life. Back up the important bits on purpose.</div>
+          <div class="lesson-foot">
+            <span class="tag">4 min read</span>
+            <button class="btn-done" type="button" data-done="updates" aria-pressed="false">Mark as learned</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="lesson" id="lesson-privacy" data-lesson="privacy" data-cat="privacy">
+        <button class="lesson-head" type="button" aria-expanded="false" aria-controls="body-privacy">
+          <span class="lesson-icon" aria-hidden="true">🕵️</span>
+          <span class="lesson-titles">
+            <span class="lesson-cat">Privacy · 5 min</span>
+            <span class="lesson-title">Shrink your data trail</span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="lesson-body" id="body-privacy" hidden>
+          <p class="lead">Privacy is not about having nothing to hide. It is about limiting what a stranger can use against you later.</p>
+          <ul class="ticks">
+            <li><b>Share less.</b> Birth date, location, school and pet names are password-reset material.</li>
+            <li><b>Use a 6+ digit screen lock</b> and enable biometrics where it helps.</li>
+            <li><b>Set a SIM PIN</b> to slow down SIM-swap attacks.</li>
+            <li><b>Turn off ad tracking</b> and review which apps can see your location.</li>
+            <li><b>Sign up for breach alerts</b>; freeze credit if identity data leaks.</li>
+            <li><b>Audit privacy settings</b> every few months — defaults change.</li>
+          </ul>
+          <div class="callout">Post the holiday photo after you get home, not while your house is empty.</div>
+          <div class="lesson-foot">
+            <span class="tag">5 min read</span>
+            <button class="btn-done" type="button" data-done="privacy" aria-pressed="false">Mark as learned</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 9 -->
+      <article class="lesson" id="lesson-incident" data-lesson="incident" data-cat="response">
+        <button class="lesson-head" type="button" aria-expanded="false" aria-controls="body-incident">
+          <span class="lesson-icon" aria-hidden="true">🚨</span>
+          <span class="lesson-titles">
+            <span class="lesson-cat">Response · 5 min</span>
+            <span class="lesson-title">If you think you've been hacked</span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="lesson-body" id="body-incident" hidden>
+          <p class="lead">Panic causes more damage than the attacker. Work through this list in order.</p>
+          <ul class="ticks">
+            <li><b>Disconnect</b> from Wi-Fi and mobile data if you suspect malware.</li>
+            <li><b>From a clean device,</b> change the password of the affected account — and of its recovery email.</li>
+            <li><b>Revoke active sessions</b> and app passwords, then turn on 2FA.</li>
+            <li><b>Check recovery email and phone</b> were not changed by someone else.</li>
+            <li><b>Tell your bank immediately</b> if money or cards may be involved.</li>
+            <li><b>Report it</b> to your local cybercrime portal (in India: cybercrime.gov.in) and keep screenshots.</li>
+          </ul>
+          <div class="callout danger">Do not pay a ransom and do not trust “recovery” services that message you first.</div>
+          <div class="lesson-foot">
+            <span class="tag">5 min read</span>
+            <button class="btn-done" type="button" data-done="incident" aria-pressed="false">Mark as learned</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- =========================== QUIZ =========================== -->
+  <section class="section" id="quiz">
+    <div class="section-head">
+      <span class="eyebrow">Two-minute check</span>
+      <h2>Would you spot it?</h2>
+      <p>Seven situations you could meet on any phone. No sign-up, no score shared with anyone.</p>
+    </div>
+
+    <div class="quiz-card">
+      <div class="quiz-top">
+        <span id="quizStep">Question 1 of 7</span>
+        <span class="score" id="quizScore">Score 0</span>
+      </div>
+      <div class="quiz-bar" aria-hidden="true"><div id="quizBar"></div></div>
+
+      <div id="quizPlay">
+        <h3 id="quizQuestion">Loading…</h3>
+        <div class="options" id="quizOptions"></div>
+        <div class="feedback" id="quizFeedback" hidden aria-live="polite"></div>
+        <button class="btn primary" id="quizNext" type="button" hidden>Next question →</button>
+      </div>
+
+      <div class="quiz-result" id="quizResult" hidden>
+        <div class="big" id="quizFinal">0 / 7</div>
+        <h3 id="quizVerdict">Nice work</h3>
+        <p id="quizSummary"></p>
+        <button class="btn primary" id="quizRestart" type="button">Try again</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== TOOLS ========================== -->
+  <section class="section" id="tools">
+    <div class="section-head">
+      <span class="eyebrow">Try it</span>
+      <h2>Password lab</h2>
+      <p>Everything below runs on your phone. Nothing you type is sent anywhere — check the network tab if you like.</p>
+    </div>
+
+    <div class="tools-card">
+      <label class="field-label" for="pwInput">Test a password</label>
+      <div class="pw-row">
+        <input id="pwInput" type="password" placeholder="Type something to test…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="pwMeterText">
+        <button class="icon-btn" id="pwToggle" type="button" aria-label="Show password" aria-pressed="false">👁</button>
+      </div>
+
+      <div class="meter" aria-hidden="true"><div id="pwMeter"></div></div>
+      <div class="meter-meta">
+        <span id="pwMeterText">Strength: <b>—</b></span>
+        <span>Offline crack time: <b id="pwTime">—</b></span>
+      </div>
+
+      <div class="pw-checks" id="pwChecks">
+        <div class="pw-check" data-check="length"><span class="box" aria-hidden="true">✓</span><span>At least 12 characters</span></div>
+        <div class="pw-check" data-check="case"><span class="box" aria-hidden="true">✓</span><span>Upper and lower case letters</span></div>
+        <div class="pw-check" data-check="number"><span class="box" aria-hidden="true">✓</span><span>At least one number</span></div>
+        <div class="pw-check" data-check="symbol"><span class="box" aria-hidden="true">✓</span><span>At least one symbol</span></div>
+        <div class="pw-check" data-check="common"><span class="box" aria-hidden="true">✓</span><span>Not a common password</span></div>
+        <div class="pw-check" data-check="sequence"><span class="box" aria-hidden="true">✓</span><span>No obvious sequences (1234, qwerty)</span></div>
+      </div>
+
+      <div class="gen-actions">
+        <button class="btn small" id="genChars" type="button">⚡ Generate strong password</button>
+        <button class="btn small" id="genWords" type="button">🧠 Generate memorable passphrase</button>
+      </div>
+
+      <p class="note">
+        Estimates assume an offline attacker with a fast GPU (about 10 billion guesses per second).
+        They are rough guidance, not a guarantee. Use a password manager and turn on 2FA.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- =========================== FOOTER =========================== -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p><strong style="color:#b9cbe0">RBX404</strong> — an educational project. Lessons are general guidance, not professional security advice.</p>
+      <p>Progress is stored only in this browser. No accounts, no cookies, no analytics.</p>
+    </div>
+    <div class="footer-links">
+      <button type="button" id="resetProgress">Reset progress</button>
+      <button type="button" id="backTop">Back to top ↑</button>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
